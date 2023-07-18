@@ -120,13 +120,13 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Paste<span class="tsd-signature-symbol">(</span>unknownTagReplacement<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="roosterjs_editor_plugins.paste.html" class="tsd-signature-type" data-tsd-kind="Class">Paste</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Paste<span class="tsd-signature-symbol">(</span>unknownTagReplacement<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, convertSingleImageBody<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="roosterjs_editor_plugins.paste.html" class="tsd-signature-type" data-tsd-kind="Class">Paste</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/mukesh-capsitech/roosterjs/blob/3afe4ae/packages/roosterjs-editor-plugins/lib/plugins/Paste/Paste.ts#L21">packages/roosterjs-editor-plugins/lib/plugins/Paste/Paste.ts:21</a></li>
+									<li>Defined in <a href="https://github.com/mukesh-capsitech/roosterjs/blob/a6360fe/packages/roosterjs-editor-plugins/lib/plugins/Paste/Paste.ts#L29">packages/roosterjs-editor-plugins/lib/plugins/Paste/Paste.ts:29</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -140,6 +140,13 @@
 									<h5>unknownTagReplacement: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &#x27;SPAN&#x27;</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Replace solution of unknown tags, default behavior is to replace with SPAN</p>
+									</div>
+								</li>
+								<li>
+									<h5>convertSingleImageBody: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>When enabled, if clipboard HTML contains a single image, we reuse the image without modifying the src attribute.
+										When disabled, pasted image src attribute will use the dataUri from clipboard data -- By Default disabled.</p>
 									</div>
 								</li>
 							</ul>
@@ -161,7 +168,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of EditorPlugin.dispose</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/mukesh-capsitech/roosterjs/blob/3afe4ae/packages/roosterjs-editor-plugins/lib/plugins/Paste/Paste.ts#L47">packages/roosterjs-editor-plugins/lib/plugins/Paste/Paste.ts:47</a></li>
+									<li>Defined in <a href="https://github.com/mukesh-capsitech/roosterjs/blob/a6360fe/packages/roosterjs-editor-plugins/lib/plugins/Paste/Paste.ts#L60">packages/roosterjs-editor-plugins/lib/plugins/Paste/Paste.ts:60</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -184,7 +191,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of EditorPlugin.getName</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/mukesh-capsitech/roosterjs/blob/3afe4ae/packages/roosterjs-editor-plugins/lib/plugins/Paste/Paste.ts#L32">packages/roosterjs-editor-plugins/lib/plugins/Paste/Paste.ts:32</a></li>
+									<li>Defined in <a href="https://github.com/mukesh-capsitech/roosterjs/blob/a6360fe/packages/roosterjs-editor-plugins/lib/plugins/Paste/Paste.ts#L45">packages/roosterjs-editor-plugins/lib/plugins/Paste/Paste.ts:45</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -207,7 +214,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of EditorPlugin.initialize</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/mukesh-capsitech/roosterjs/blob/3afe4ae/packages/roosterjs-editor-plugins/lib/plugins/Paste/Paste.ts#L40">packages/roosterjs-editor-plugins/lib/plugins/Paste/Paste.ts:40</a></li>
+									<li>Defined in <a href="https://github.com/mukesh-capsitech/roosterjs/blob/a6360fe/packages/roosterjs-editor-plugins/lib/plugins/Paste/Paste.ts#L53">packages/roosterjs-editor-plugins/lib/plugins/Paste/Paste.ts:53</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -239,7 +246,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of EditorPlugin.onPluginEvent</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/mukesh-capsitech/roosterjs/blob/3afe4ae/packages/roosterjs-editor-plugins/lib/plugins/Paste/Paste.ts#L55">packages/roosterjs-editor-plugins/lib/plugins/Paste/Paste.ts:55</a></li>
+									<li>Defined in <a href="https://github.com/mukesh-capsitech/roosterjs/blob/a6360fe/packages/roosterjs-editor-plugins/lib/plugins/Paste/Paste.ts#L68">packages/roosterjs-editor-plugins/lib/plugins/Paste/Paste.ts:68</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -273,6 +280,18 @@
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/roosterjs_color_utils.html">roosterjs-<wbr>color-<wbr>utils</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/roosterjs_content_model.html">roosterjs-<wbr>content-<wbr>model</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/roosterjs_content_model_dom.html">roosterjs-<wbr>content-<wbr>model-<wbr>dom</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/roosterjs_content_model_editor.html">roosterjs-<wbr>content-<wbr>model-<wbr>editor</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/roosterjs_content_model_types.html">roosterjs-<wbr>content-<wbr>model-<wbr>types</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/roosterjs_editor_api.html">roosterjs-<wbr>editor-<wbr>api</a>
