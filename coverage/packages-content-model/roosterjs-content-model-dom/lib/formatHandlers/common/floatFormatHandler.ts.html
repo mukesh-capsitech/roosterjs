@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for packages-content-model/roosterjs-content-model-dom/lib/formatHandlers/list/listTypeFormatHandler.ts</title>
+    <title>Code coverage report for packages-content-model/roosterjs-content-model-dom/lib/formatHandlers/common/floatFormatHandler.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../../../prettify.css" />
     <link rel="stylesheet" href="../../../../../base.css" />
@@ -19,20 +19,20 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../../../../index.html">All files</a> / <a href="index.html">packages-content-model/roosterjs-content-model-dom/lib/formatHandlers/list</a> listTypeFormatHandler.ts</h1>
+        <h1><a href="../../../../../index.html">All files</a> / <a href="index.html">packages-content-model/roosterjs-content-model-dom/lib/formatHandlers/common</a> floatFormatHandler.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>5/5</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>4/4</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>5/5</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
@@ -74,8 +74,10 @@
 <a name='L15'></a><a href='#L15'>15</a>
 <a name='L16'></a><a href='#L16'>16</a>
 <a name='L17'></a><a href='#L17'>17</a>
-<a name='L18'></a><a href='#L18'>18</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -83,30 +85,37 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">132x</span>
+<span class="cline-any cline-yes">16x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">132x</span>
-<span class="cline-any cline-yes">112x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { FormatHandler } from '../FormatHandler';
-import { getTagOfNode } from 'roosterjs-editor-dom';
-import { ListTypeFormat } from 'roosterjs-content-model-types';
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { FloatFormat } from 'roosterjs-content-model-types';
+import { FormatHandler } from '../FormatHandler';
 &nbsp;
 /**
  * @internal
  */
-export const listTypeFormatHandler: FormatHandler&lt;ListTypeFormat&gt; = {
+export const floatFormatHandler: FormatHandler&lt;FloatFormat&gt; = {
     parse: (format, element) =&gt; {
-        const tag = getTagOfNode(element);
+        const float = element.style.float || element.getAttribute('align');
 &nbsp;
-        if (tag == 'OL' || tag == 'UL') {
-            format.listType = tag;
+        if (float) {
+            format.float = float;
         }
     },
-    apply: () =&gt; {},
+    apply: (format, element) =&gt; {
+        if (format.float) {
+            element.style.float = format.float;
+        }
+    },
 };
 &nbsp;</pre></td></tr></table></pre>
 
@@ -115,7 +124,7 @@ export const listTypeFormatHandler: FormatHandler&lt;ListTypeFormat&gt; = {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Tue Jul 18 2023 16:26:42 GMT+0000 (Coordinated Universal Time)
+                at Wed Aug 09 2023 09:55:48 GMT+0000 (Coordinated Universal Time)
             </div>
         </div>
         <script src="../../../../../prettify.js"></script>
