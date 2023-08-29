@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for packages-content-model/roosterjs-content-model-editor/lib/publicApi/block/setHeaderLevel.ts</title>
+    <title>Code coverage report for packages-content-model/roosterjs-content-model-editor/lib/modelApi/table/ensureFocusableParagraphForTable.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../../../prettify.css" />
     <link rel="stylesheet" href="../../../../../base.css" />
@@ -19,20 +19,20 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../../../../index.html">All files</a> / <a href="index.html">packages-content-model/roosterjs-content-model-editor/lib/publicApi/block</a> setHeaderLevel.ts</h1>
+        <h1><a href="../../../../../index.html">All files</a> / <a href="index.html">packages-content-model/roosterjs-content-model-editor/lib/modelApi/table</a> ensureFocusableParagraphForTable.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>16/16</span>
+                <span class='fraction'>24/24</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">90.48% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>19/19</span>
+                <span class='fraction'>19/21</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>16/16</span>
+                <span class='fraction'>23/23</span>
             </div>
         
             
@@ -109,109 +109,175 @@
 <a name='L50'></a><a href='#L50'>50</a>
 <a name='L51'></a><a href='#L51'>51</a>
 <a name='L52'></a><a href='#L52'>52</a>
-<a name='L53'></a><a href='#L53'>53</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { defaultImplicitFormatMap } from 'roosterjs-content-model-dom';
-import { formatParagraphWithContentModel } from '../utils/formatParagraphWithContentModel';
-import { IContentModelEditor } from '../../publicTypes/IContentModelEditor';
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { createBr, createParagraph } from 'roosterjs-content-model-dom';
 import {
-    ContentModelParagraphDecorator,
-    ContentModelSegmentFormat,
+    ContentModelBlock,
+    ContentModelBlockGroup,
+    ContentModelDocument,
+    ContentModelParagraph,
+    ContentModelTable,
 } from 'roosterjs-content-model-types';
 &nbsp;
-type HeaderLevelTags = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
-&nbsp;
 /**
- * Set header level of selected paragraphs
- * @param editor The editor to set header level to
- * @param headerLevel Level of header, from 1 to 6. Set to 0 means set it back to a regular paragraph
+ * @internal
+ * After edit table, it maybe in a abnormal state, e.g. selected table cell is removed, or all rows are removed causes no place to put cursor.
+ * We need to make sure table is in normal state, and there is a place to put cursor.
+ * @returns a new paragraph that can but put focus in, or undefined if not needed
  */
-export default function setHeaderLevel(
-    editor: IContentModelEditor,
-    headerLevel: 0 | 1 | 2 | 3 | 4 | 5 | 6
-) {
-    formatParagraphWithContentModel(editor, 'setHeaderLevel', para =&gt; {
-        const tagName =
-            headerLevel &gt; 0
-                ? (('h' + headerLevel) as HeaderLevelTags | null)
-                : getExistingHeaderHeaderTag(para.decorator);
-        const headerStyle =
-            (tagName &amp;&amp; (defaultImplicitFormatMap[tagName] as ContentModelSegmentFormat)) || {};
+export function ensureFocusableParagraphForTable(
+    model: ContentModelDocument,
+    path: ContentModelBlockGroup[],
+    table: ContentModelTable
+): ContentModelParagraph | undefined {
+    let paragraph: ContentModelParagraph | undefined;
+    const firstCell = table.rows.filter(row =&gt; row.cells.length &gt; 0)[0]?.cells[0];
 &nbsp;
-        if (headerLevel &gt; 0) {
-            para.decorator = {
-                tagName: tagName!,
-                format: { ...headerStyle },
-            };
+    if (firstCell) {
+        // When there is a valid cell to put focus, use it
+        paragraph = firstCell.blocks.filter(
+            (block): block is ContentModelParagraph =&gt; block.blockType == 'Paragraph'
+        )[0];
 &nbsp;
-            // Remove existing formats since tags have default font size and weight
-            para.segments.forEach(segment =&gt; {
-                delete segment.format.fontSize;
-                delete segment.format.fontWeight;
-            });
-        } else if (tagName) {
-            delete para.decorator;
+        if (!paragraph) {
+            // If there is not a paragraph under this cell, create one
+            paragraph = createEmptyParagraph(model);
+            firstCell.blocks.push(paragraph);
         }
-    });
+    } else {
+        // No table cell at all, which means the whole table is deleted. So we need to remove it from content model.
+        let block: ContentModelBlock = table;
+        let parent: ContentModelBlockGroup | undefined;
+        paragraph = createEmptyParagraph(model);
+&nbsp;
+        // If the table is the only block of its parent and parent is a FormatContainer, remove the parent as well.
+        // We need to do this in a loop in case there are multiple layer of FormatContainer that match this case
+        while ((parent = path.shift())) {
+            const index = parent.blocks.indexOf(block) ?? <span class="branch-1 cbranch-no" title="branch not covered" >-1;</span>
+&nbsp;
+            <span class="missing-if-branch" title="else path not taken" >E</span>if (parent &amp;&amp; index &gt;= 0) {
+                parent.blocks.splice(index, 1, paragraph);
+            }
+&nbsp;
+            if (
+                parent.blockGroupType == 'FormatContainer' &amp;&amp;
+                parent.blocks.length == 1 &amp;&amp;
+                parent.blocks[0] == paragraph
+            ) {
+                // If the new paragraph is the only child of parent format container, unwrap parent as well
+                block = parent;
+            } else {
+                // Otherwise, just stop here and keep processing the new paragraph
+                break;
+            }
+        }
+    }
+&nbsp;
+    return paragraph;
 }
 &nbsp;
-function getExistingHeaderHeaderTag(
-    decorator?: ContentModelParagraphDecorator
-): HeaderLevelTags | null {
-    const tag = decorator?.tagName || '';
-    const level = parseInt(tag.substring(1));
+function createEmptyParagraph(model: ContentModelDocument) {
+    const newPara = createParagraph(false /*isImplicit*/, undefined /*blockFormat*/, model.format);
+    const br = createBr(model.format);
 &nbsp;
-    return level &gt;= 1 &amp;&amp; level &lt;= 6 ? (tag as HeaderLevelTags) : null;
+    newPara.segments.push(br);
+&nbsp;
+    return newPara;
 }
 &nbsp;</pre></td></tr></table></pre>
 
@@ -220,7 +286,7 @@ function getExistingHeaderHeaderTag(
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Wed Aug 09 2023 09:55:48 GMT+0000 (Coordinated Universal Time)
+                at Tue Aug 29 2023 09:32:16 GMT+0000 (Coordinated Universal Time)
             </div>
         </div>
         <script src="../../../../../prettify.js"></script>
