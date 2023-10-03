@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ModelToDomImageSelection | RoosterJs API Reference</title>
+	<title>SelectionBase | RoosterJs API Reference</title>
 	<meta name="description" content="Documentation for RoosterJs API Reference">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../modules/roosterjs_content_model_types.html">roosterjs-content-model-types</a>
 				</li>
 				<li>
-					<a href="roosterjs_content_model_types.modeltodomimageselection.html">ModelToDomImageSelection</a>
+					<a href="roosterjs_content_model_types.selectionbase.html">SelectionBase</a>
 				</li>
 			</ul>
-			<h1>Interface ModelToDomImageSelection</h1>
+			<h1>Interface SelectionBase&lt;T&gt;</h1>
 		</div>
 	</div>
 </header>
@@ -69,15 +69,34 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Represents an image selection for Content Model to DOM conversion</p>
+						<p>Base type of Selection</p>
 					</div>
 				</div>
+			</section>
+			<section class="tsd-panel tsd-type-parameters">
+				<h3>Type parameters</h3>
+				<ul class="tsd-type-parameters">
+					<li>
+						<h4>T<span class="tsd-signature-symbol">: </span><a href="../modules/roosterjs_content_model_types.html#selectiontype" class="tsd-signature-type" data-tsd-kind="Type alias">SelectionType</a></h4>
+					</li>
+				</ul>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">ModelToDomImageSelection</span>
+						<span class="target">SelectionBase</span>
+						<ul class="tsd-hierarchy">
+							<li>
+								<a href="roosterjs_content_model_types.imageselection.html" class="tsd-signature-type" data-tsd-kind="Interface">ImageSelection</a>
+							</li>
+							<li>
+								<a href="roosterjs_content_model_types.rangeselection.html" class="tsd-signature-type" data-tsd-kind="Interface">RangeSelection</a>
+							</li>
+							<li>
+								<a href="roosterjs_content_model_types.tableselection.html" class="tsd-signature-type" data-tsd-kind="Interface">TableSelection</a>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</section>
@@ -88,7 +107,7 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="roosterjs_content_model_types.modeltodomimageselection.html#image" class="tsd-kind-icon">image</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="roosterjs_content_model_types.selectionbase.html#type" class="tsd-kind-icon">type</a></li>
 							</ul>
 						</section>
 					</div>
@@ -97,17 +116,17 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="image" class="tsd-anchor"></a>
-					<h3>image</h3>
-					<div class="tsd-signature tsd-kind-icon">image<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">HTMLImageElement</span></div>
+					<a name="type" class="tsd-anchor"></a>
+					<h3>type</h3>
+					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/mukesh-capsitech/roosterjs/blob/8f99244/packages-content-model/roosterjs-content-model-types/lib/context/ModelToDomSelectionContext.ts#L66">packages-content-model/roosterjs-content-model-types/lib/context/ModelToDomSelectionContext.ts:66</a></li>
+							<li>Defined in <a href="https://github.com/mukesh-capsitech/roosterjs/blob/c7d6092/packages-content-model/roosterjs-content-model-types/lib/selection/DOMSelection.ts#L18">packages-content-model/roosterjs-content-model-types/lib/selection/DOMSelection.ts:18</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Selected image</p>
+							<p>Type of this selection</p>
 						</div>
 					</div>
 				</section>
@@ -164,11 +183,11 @@
 				<ul class="before-current">
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-interface tsd-parent-kind-module">
-						<a href="roosterjs_content_model_types.modeltodomimageselection.html" class="tsd-kind-icon">Model<wbr>ToDom<wbr>Image<wbr>Selection</a>
+					<li class="current tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="roosterjs_content_model_types.selectionbase.html" class="tsd-kind-icon">Selection<wbr>Base</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="roosterjs_content_model_types.modeltodomimageselection.html#image" class="tsd-kind-icon">image</a>
+								<a href="roosterjs_content_model_types.selectionbase.html#type" class="tsd-kind-icon">type</a>
 							</li>
 						</ul>
 					</li>

@@ -269,17 +269,12 @@
 <a name='L210'></a><a href='#L210'>210</a>
 <a name='L211'></a><a href='#L211'>211</a>
 <a name='L212'></a><a href='#L212'>212</a>
-<a name='L213'></a><a href='#L213'>213</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<a name='L213'></a><a href='#L213'>213</a>
+<a name='L214'></a><a href='#L214'>214</a>
+<a name='L215'></a><a href='#L215'>215</a>
+<a name='L216'></a><a href='#L216'>216</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -288,6 +283,14 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -346,6 +349,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">19x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -482,16 +488,23 @@
 <span class="cline-any cline-yes">19x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import getSelectedSegments from '../selection/getSelectedSegments';
-import { applySegmentFormatToElement, domToContentModel } from 'roosterjs-content-model-dom';
-import { ContentModelDocument, ContentModelSegmentFormat } from 'roosterjs-content-model-types';
+import { ChangeSource, GetContentMode, PasteType, PluginEventType } from 'roosterjs-editor-types';
 import { formatWithContentModel } from './formatWithContentModel';
-import { FormatWithContentModelContext } from '../../publicTypes/parameter/FormatWithContentModelContext';
-import { IContentModelEditor } from '../../publicTypes/IContentModelEditor';
 import { mergeModel } from '../../modelApi/common/mergeModel';
-import { NodePosition } from 'roosterjs-editor-types';
-import ContentModelBeforePasteEvent, {
-    ContentModelBeforePasteEventData,
-} from '../../publicTypes/event/ContentModelBeforePasteEvent';
+import type {
+    ContentModelDocument,
+    ContentModelSegmentFormat,
+} from 'roosterjs-content-model-types';
+import type { FormatWithContentModelContext } from '../../publicTypes/parameter/FormatWithContentModelContext';
+import type { IContentModelEditor } from '../../publicTypes/IContentModelEditor';
+import type { NodePosition, ClipboardData } from 'roosterjs-editor-types';
+import {
+    applySegmentFormatToElement,
+    createDomToModelContext,
+    domToContentModel,
+} from 'roosterjs-content-model-dom';
+import type { ContentModelBeforePasteEventData } from '../../publicTypes/event/ContentModelBeforePasteEvent';
+import type ContentModelBeforePasteEvent from '../../publicTypes/event/ContentModelBeforePasteEvent';
 import {
     createDefaultHtmlSanitizerOptions,
     getPasteType,
@@ -501,13 +514,6 @@ import {
     retrieveMetadataFromClipboard,
     sanitizePasteContent,
 } from 'roosterjs-editor-dom';
-import {
-    ChangeSource,
-    ClipboardData,
-    GetContentMode,
-    PasteType,
-    PluginEventType,
-} from 'roosterjs-editor-types';
 &nbsp;
 /**
  * Paste into editor using a clipboardData object
@@ -557,7 +563,10 @@ export default function paste(
                 { fontFamily, fontSize, textColor, backgroundColor, letterSpacing, lineHeight }
             );
 &nbsp;
-            const pasteModel = domToContentModel(fragment, domToModelOption);
+            const pasteModel = domToContentModel(
+                fragment,
+                createDomToModelContext(undefined /*editorContext*/, domToModelOption)
+            );
 &nbsp;
             mergePasteContent(model, context, pasteModel, applyCurrentFormat, customizedMerge);
 &nbsp;
@@ -700,7 +709,7 @@ function triggerPluginEventAndCreatePasteFragment(
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Fri Sep 15 2023 12:55:49 GMT+0000 (Coordinated Universal Time)
+                at Tue Oct 03 2023 06:40:06 GMT+0000 (Coordinated Universal Time)
             </div>
         </div>
         <script src="../../../../../prettify.js"></script>
