@@ -94,14 +94,21 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="roosterjs_content_model_types.portedcoreapimap.html#addundosnapshot" class="tsd-kind-icon">add<wbr>Undo<wbr>Snapshot</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="roosterjs_content_model_types.portedcoreapimap.html#attachdomevent" class="tsd-kind-icon">attach<wbr>Dom<wbr>Event</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="roosterjs_content_model_types.portedcoreapimap.html#createcontentmodel" class="tsd-kind-icon">create<wbr>Content<wbr>Model</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="roosterjs_content_model_types.portedcoreapimap.html#createeditorcontext" class="tsd-kind-icon">create<wbr>Editor<wbr>Context</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="roosterjs_content_model_types.portedcoreapimap.html#focus" class="tsd-kind-icon">focus</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="roosterjs_content_model_types.portedcoreapimap.html#formatcontentmodel" class="tsd-kind-icon">format<wbr>Content<wbr>Model</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="roosterjs_content_model_types.portedcoreapimap.html#getdomselection" class="tsd-kind-icon">getDOMSelection</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="roosterjs_content_model_types.portedcoreapimap.html#getvisibleviewport" class="tsd-kind-icon">get<wbr>Visible<wbr>Viewport</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="roosterjs_content_model_types.portedcoreapimap.html#hasfocus" class="tsd-kind-icon">has<wbr>Focus</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="roosterjs_content_model_types.portedcoreapimap.html#paste" class="tsd-kind-icon">paste</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="roosterjs_content_model_types.portedcoreapimap.html#restoreundosnapshot" class="tsd-kind-icon">restore<wbr>Undo<wbr>Snapshot</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="roosterjs_content_model_types.portedcoreapimap.html#setcontentmodel" class="tsd-kind-icon">set<wbr>Content<wbr>Model</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="roosterjs_content_model_types.portedcoreapimap.html#setdomselection" class="tsd-kind-icon">setDOMSelection</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="roosterjs_content_model_types.portedcoreapimap.html#switchshadowedit" class="tsd-kind-icon">switch<wbr>Shadow<wbr>Edit</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="roosterjs_content_model_types.portedcoreapimap.html#triggerevent" class="tsd-kind-icon">trigger<wbr>Event</a></li>
 							</ul>
 						</section>
 					</div>
@@ -110,12 +117,63 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="addundosnapshot" class="tsd-anchor"></a>
+					<h3>add<wbr>Undo<wbr>Snapshot</h3>
+					<div class="tsd-signature tsd-kind-icon">add<wbr>Undo<wbr>Snapshot<span class="tsd-signature-symbol">:</span> <a href="../modules/roosterjs_content_model_types.html#addundosnapshot" class="tsd-signature-type" data-tsd-kind="Type alias">AddUndoSnapshot</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/mukesh-capsitech/roosterjs/blob/9aafcb6/packages-content-model/roosterjs-content-model-types/lib/editor/StandaloneEditorCore.ts#L327">packages-content-model/roosterjs-content-model-types/lib/editor/StandaloneEditorCore.ts:327</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Add an undo snapshot to current undo snapshot stack</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>param</dt>
+							<dd><p>The StandaloneEditorCore object</p>
+							</dd>
+							<dt>param</dt>
+							<dd><p>True if this action can be undone when user press Backspace key (aka Auto Complete).</p>
+							</dd>
+							<dt>param</dt>
+							<dd><p>@optional Entity states related to this snapshot.
+									Each entity state will cause an EntityOperation event with operation = EntityOperation.UpdateEntityState
+								when undo/redo to this snapshot</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="attachdomevent" class="tsd-anchor"></a>
+					<h3>attach<wbr>Dom<wbr>Event</h3>
+					<div class="tsd-signature tsd-kind-icon">attach<wbr>Dom<wbr>Event<span class="tsd-signature-symbol">:</span> <a href="../modules/roosterjs_content_model_types.html#attachdomevent" class="tsd-signature-type" data-tsd-kind="Type alias">AttachDomEvent</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/mukesh-capsitech/roosterjs/blob/9aafcb6/packages-content-model/roosterjs-content-model-types/lib/editor/StandaloneEditorCore.ts#L341">packages-content-model/roosterjs-content-model-types/lib/editor/StandaloneEditorCore.ts:341</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Attach a DOM event to the editor content DIV</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>param</dt>
+							<dd><p>The StandaloneEditorCore object</p>
+							</dd>
+							<dt>param</dt>
+							<dd><p>A map from event name to its handler</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="createcontentmodel" class="tsd-anchor"></a>
 					<h3>create<wbr>Content<wbr>Model</h3>
 					<div class="tsd-signature tsd-kind-icon">create<wbr>Content<wbr>Model<span class="tsd-signature-symbol">:</span> <a href="../modules/roosterjs_content_model_types.html#createcontentmodel" class="tsd-signature-type" data-tsd-kind="Type alias">CreateContentModel</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/mukesh-capsitech/roosterjs/blob/1e5c3bd/packages-content-model/roosterjs-content-model-types/lib/editor/StandaloneEditorCore.ts#L347">packages-content-model/roosterjs-content-model-types/lib/editor/StandaloneEditorCore.ts:347</a></li>
+							<li>Defined in <a href="https://github.com/mukesh-capsitech/roosterjs/blob/9aafcb6/packages-content-model/roosterjs-content-model-types/lib/editor/StandaloneEditorCore.ts#L258">packages-content-model/roosterjs-content-model-types/lib/editor/StandaloneEditorCore.ts:258</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -138,7 +196,7 @@
 					<div class="tsd-signature tsd-kind-icon">create<wbr>Editor<wbr>Context<span class="tsd-signature-symbol">:</span> <a href="../modules/roosterjs_content_model_types.html#createeditorcontext" class="tsd-signature-type" data-tsd-kind="Type alias">CreateEditorContext</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/mukesh-capsitech/roosterjs/blob/1e5c3bd/packages-content-model/roosterjs-content-model-types/lib/editor/StandaloneEditorCore.ts#L340">packages-content-model/roosterjs-content-model-types/lib/editor/StandaloneEditorCore.ts:340</a></li>
+							<li>Defined in <a href="https://github.com/mukesh-capsitech/roosterjs/blob/9aafcb6/packages-content-model/roosterjs-content-model-types/lib/editor/StandaloneEditorCore.ts#L251">packages-content-model/roosterjs-content-model-types/lib/editor/StandaloneEditorCore.ts:251</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -153,12 +211,32 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="focus" class="tsd-anchor"></a>
+					<h3>focus</h3>
+					<div class="tsd-signature tsd-kind-icon">focus<span class="tsd-signature-symbol">:</span> <a href="../modules/roosterjs_content_model_types.html#focus" class="tsd-signature-type" data-tsd-kind="Type alias">Focus</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/mukesh-capsitech/roosterjs/blob/9aafcb6/packages-content-model/roosterjs-content-model-types/lib/editor/StandaloneEditorCore.ts#L317">packages-content-model/roosterjs-content-model-types/lib/editor/StandaloneEditorCore.ts:317</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Focus to editor. If there is a cached selection range, use it as current selection</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>param</dt>
+							<dd><p>The StandaloneEditorCore object</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="formatcontentmodel" class="tsd-anchor"></a>
 					<h3>format<wbr>Content<wbr>Model</h3>
 					<div class="tsd-signature tsd-kind-icon">format<wbr>Content<wbr>Model<span class="tsd-signature-symbol">:</span> <a href="../modules/roosterjs_content_model_types.html#formatcontentmodel" class="tsd-signature-type" data-tsd-kind="Type alias">FormatContentModel</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/mukesh-capsitech/roosterjs/blob/1e5c3bd/packages-content-model/roosterjs-content-model-types/lib/editor/StandaloneEditorCore.ts#L379">packages-content-model/roosterjs-content-model-types/lib/editor/StandaloneEditorCore.ts:379</a></li>
+							<li>Defined in <a href="https://github.com/mukesh-capsitech/roosterjs/blob/9aafcb6/packages-content-model/roosterjs-content-model-types/lib/editor/StandaloneEditorCore.ts#L291">packages-content-model/roosterjs-content-model-types/lib/editor/StandaloneEditorCore.ts:291</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -187,7 +265,7 @@
 					<div class="tsd-signature tsd-kind-icon">getDOMSelection<span class="tsd-signature-symbol">:</span> <a href="../modules/roosterjs_content_model_types.html#getdomselection" class="tsd-signature-type" data-tsd-kind="Type alias">GetDOMSelection</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/mukesh-capsitech/roosterjs/blob/1e5c3bd/packages-content-model/roosterjs-content-model-types/lib/editor/StandaloneEditorCore.ts#L353">packages-content-model/roosterjs-content-model-types/lib/editor/StandaloneEditorCore.ts:353</a></li>
+							<li>Defined in <a href="https://github.com/mukesh-capsitech/roosterjs/blob/9aafcb6/packages-content-model/roosterjs-content-model-types/lib/editor/StandaloneEditorCore.ts#L264">packages-content-model/roosterjs-content-model-types/lib/editor/StandaloneEditorCore.ts:264</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -207,7 +285,7 @@
 					<div class="tsd-signature tsd-kind-icon">get<wbr>Visible<wbr>Viewport<span class="tsd-signature-symbol">:</span> <a href="../modules/roosterjs_content_model_types.html#getvisibleviewport" class="tsd-signature-type" data-tsd-kind="Type alias">GetVisibleViewport</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/mukesh-capsitech/roosterjs/blob/1e5c3bd/packages-content-model/roosterjs-content-model-types/lib/editor/StandaloneEditorCore.ts#L392">packages-content-model/roosterjs-content-model-types/lib/editor/StandaloneEditorCore.ts:392</a></li>
+							<li>Defined in <a href="https://github.com/mukesh-capsitech/roosterjs/blob/9aafcb6/packages-content-model/roosterjs-content-model-types/lib/editor/StandaloneEditorCore.ts#L304">packages-content-model/roosterjs-content-model-types/lib/editor/StandaloneEditorCore.ts:304</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -222,12 +300,84 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="hasfocus" class="tsd-anchor"></a>
+					<h3>has<wbr>Focus</h3>
+					<div class="tsd-signature tsd-kind-icon">has<wbr>Focus<span class="tsd-signature-symbol">:</span> <a href="../modules/roosterjs_content_model_types.html#hasfocus" class="tsd-signature-type" data-tsd-kind="Type alias">HasFocus</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/mukesh-capsitech/roosterjs/blob/9aafcb6/packages-content-model/roosterjs-content-model-types/lib/editor/StandaloneEditorCore.ts#L311">packages-content-model/roosterjs-content-model-types/lib/editor/StandaloneEditorCore.ts:311</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Check if the editor has focus now</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>param</dt>
+							<dd><p>The StandaloneEditorCore object</p>
+							</dd>
+							<dt>returns</dt>
+							<dd><p>True if the editor has focus, otherwise false</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="paste" class="tsd-anchor"></a>
+					<h3>paste</h3>
+					<div class="tsd-signature tsd-kind-icon">paste<span class="tsd-signature-symbol">:</span> <a href="../modules/roosterjs_content_model_types.html#paste" class="tsd-signature-type" data-tsd-kind="Type alias">Paste</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/mukesh-capsitech/roosterjs/blob/9aafcb6/packages-content-model/roosterjs-content-model-types/lib/editor/StandaloneEditorCore.ts#L357">packages-content-model/roosterjs-content-model-types/lib/editor/StandaloneEditorCore.ts:357</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Paste into editor using a clipboardData object</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>param</dt>
+							<dd><p>The editor to paste content into</p>
+							</dd>
+							<dt>param</dt>
+							<dd><p>Clipboard data retrieved from clipboard</p>
+							</dd>
+							<dt>param</dt>
+							<dd><p>Type of content to paste. @default normal</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="restoreundosnapshot" class="tsd-anchor"></a>
+					<h3>restore<wbr>Undo<wbr>Snapshot</h3>
+					<div class="tsd-signature tsd-kind-icon">restore<wbr>Undo<wbr>Snapshot<span class="tsd-signature-symbol">:</span> <a href="../modules/roosterjs_content_model_types.html#restoreundosnapshot" class="tsd-signature-type" data-tsd-kind="Type alias">RestoreUndoSnapshot</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/mukesh-capsitech/roosterjs/blob/9aafcb6/packages-content-model/roosterjs-content-model-types/lib/editor/StandaloneEditorCore.ts#L334">packages-content-model/roosterjs-content-model-types/lib/editor/StandaloneEditorCore.ts:334</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Restore an undo snapshot into editor</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>param</dt>
+							<dd><p>The editor core object</p>
+							</dd>
+							<dt>param</dt>
+							<dd><p>Steps to move, can be 0, positive or negative</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="setcontentmodel" class="tsd-anchor"></a>
 					<h3>set<wbr>Content<wbr>Model</h3>
 					<div class="tsd-signature tsd-kind-icon">set<wbr>Content<wbr>Model<span class="tsd-signature-symbol">:</span> <a href="../modules/roosterjs_content_model_types.html#setcontentmodel" class="tsd-signature-type" data-tsd-kind="Type alias">SetContentModel</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/mukesh-capsitech/roosterjs/blob/1e5c3bd/packages-content-model/roosterjs-content-model-types/lib/editor/StandaloneEditorCore.ts#L361">packages-content-model/roosterjs-content-model-types/lib/editor/StandaloneEditorCore.ts:361</a></li>
+							<li>Defined in <a href="https://github.com/mukesh-capsitech/roosterjs/blob/9aafcb6/packages-content-model/roosterjs-content-model-types/lib/editor/StandaloneEditorCore.ts#L272">packages-content-model/roosterjs-content-model-types/lib/editor/StandaloneEditorCore.ts:272</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -253,7 +403,7 @@
 					<div class="tsd-signature tsd-kind-icon">setDOMSelection<span class="tsd-signature-symbol">:</span> <a href="../modules/roosterjs_content_model_types.html#setdomselection" class="tsd-signature-type" data-tsd-kind="Type alias">SetDOMSelection</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/mukesh-capsitech/roosterjs/blob/1e5c3bd/packages-content-model/roosterjs-content-model-types/lib/editor/StandaloneEditorCore.ts#L368">packages-content-model/roosterjs-content-model-types/lib/editor/StandaloneEditorCore.ts:368</a></li>
+							<li>Defined in <a href="https://github.com/mukesh-capsitech/roosterjs/blob/9aafcb6/packages-content-model/roosterjs-content-model-types/lib/editor/StandaloneEditorCore.ts#L280">packages-content-model/roosterjs-content-model-types/lib/editor/StandaloneEditorCore.ts:280</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -267,6 +417,9 @@
 							<dt>param</dt>
 							<dd><p>The selection to set</p>
 							</dd>
+							<dt>param</dt>
+							<dd><p>@param Pass true to skip triggering a SelectionChangedEvent</p>
+							</dd>
 						</dl>
 					</div>
 				</section>
@@ -276,7 +429,7 @@
 					<div class="tsd-signature tsd-kind-icon">switch<wbr>Shadow<wbr>Edit<span class="tsd-signature-symbol">:</span> <a href="../modules/roosterjs_content_model_types.html#switchshadowedit" class="tsd-signature-type" data-tsd-kind="Type alias">SwitchShadowEdit</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/mukesh-capsitech/roosterjs/blob/1e5c3bd/packages-content-model/roosterjs-content-model-types/lib/editor/StandaloneEditorCore.ts#L386">packages-content-model/roosterjs-content-model-types/lib/editor/StandaloneEditorCore.ts:386</a></li>
+							<li>Defined in <a href="https://github.com/mukesh-capsitech/roosterjs/blob/9aafcb6/packages-content-model/roosterjs-content-model-types/lib/editor/StandaloneEditorCore.ts#L298">packages-content-model/roosterjs-content-model-types/lib/editor/StandaloneEditorCore.ts:298</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -289,6 +442,32 @@
 							</dd>
 							<dt>param</dt>
 							<dd><p>True to switch On, False to switch Off</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="triggerevent" class="tsd-anchor"></a>
+					<h3>trigger<wbr>Event</h3>
+					<div class="tsd-signature tsd-kind-icon">trigger<wbr>Event<span class="tsd-signature-symbol">:</span> <a href="../modules/roosterjs_content_model_types.html#triggerevent" class="tsd-signature-type" data-tsd-kind="Type alias">TriggerEvent</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/mukesh-capsitech/roosterjs/blob/9aafcb6/packages-content-model/roosterjs-content-model-types/lib/editor/StandaloneEditorCore.ts#L349">packages-content-model/roosterjs-content-model-types/lib/editor/StandaloneEditorCore.ts:349</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Trigger a plugin event</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>param</dt>
+							<dd><p>The StandaloneEditorCore object</p>
+							</dd>
+							<dt>param</dt>
+							<dd><p>The event object to trigger</p>
+							</dd>
+							<dt>param</dt>
+							<dd><p>Set to true to skip the shouldHandleEventExclusively check</p>
 							</dd>
 						</dl>
 					</div>
@@ -350,10 +529,19 @@
 						<a href="roosterjs_content_model_types.portedcoreapimap.html" class="tsd-kind-icon">Ported<wbr>Core<wbr>Api<wbr>Map</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="roosterjs_content_model_types.portedcoreapimap.html#addundosnapshot" class="tsd-kind-icon">add<wbr>Undo<wbr>Snapshot</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="roosterjs_content_model_types.portedcoreapimap.html#attachdomevent" class="tsd-kind-icon">attach<wbr>Dom<wbr>Event</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="roosterjs_content_model_types.portedcoreapimap.html#createcontentmodel" class="tsd-kind-icon">create<wbr>Content<wbr>Model</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="roosterjs_content_model_types.portedcoreapimap.html#createeditorcontext" class="tsd-kind-icon">create<wbr>Editor<wbr>Context</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="roosterjs_content_model_types.portedcoreapimap.html#focus" class="tsd-kind-icon">focus</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="roosterjs_content_model_types.portedcoreapimap.html#formatcontentmodel" class="tsd-kind-icon">format<wbr>Content<wbr>Model</a>
@@ -365,6 +553,15 @@
 								<a href="roosterjs_content_model_types.portedcoreapimap.html#getvisibleviewport" class="tsd-kind-icon">get<wbr>Visible<wbr>Viewport</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="roosterjs_content_model_types.portedcoreapimap.html#hasfocus" class="tsd-kind-icon">has<wbr>Focus</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="roosterjs_content_model_types.portedcoreapimap.html#paste" class="tsd-kind-icon">paste</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="roosterjs_content_model_types.portedcoreapimap.html#restoreundosnapshot" class="tsd-kind-icon">restore<wbr>Undo<wbr>Snapshot</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="roosterjs_content_model_types.portedcoreapimap.html#setcontentmodel" class="tsd-kind-icon">set<wbr>Content<wbr>Model</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
@@ -372,6 +569,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="roosterjs_content_model_types.portedcoreapimap.html#switchshadowedit" class="tsd-kind-icon">switch<wbr>Shadow<wbr>Edit</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="roosterjs_content_model_types.portedcoreapimap.html#triggerevent" class="tsd-kind-icon">trigger<wbr>Event</a>
 							</li>
 						</ul>
 					</li>
